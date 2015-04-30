@@ -1,0 +1,14 @@
+<h1>Search for a movie</h1>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<% @results.each do |movie| %>
+	<div>
+	<%= movie["Title"] %>
+	<a href="/movie/<%=movie["imdbID"]%>">Find out more about <%=movie["imdbID"]%></a>
+	</div>
+<% end %>

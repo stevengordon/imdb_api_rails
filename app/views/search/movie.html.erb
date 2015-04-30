@@ -1,0 +1,17 @@
+<h1>Details about a movie</h1>
+
+<div>
+	Title: <%= @result["Title"] %> <br>
+	Year: <%= @result["Year"] %> <br>
+	Rating: <%= @result["Rated"] %> <br>
+	Director: <%= @result["Director"] %> <br>
+	Plot: <%= @result["Plot"] %> <br>
+</div>
+
+<h3>Search again</h3>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
