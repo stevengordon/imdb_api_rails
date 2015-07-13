@@ -7,8 +7,8 @@
 
 
 <% @results.each do |movie| %>
-	<div>
-	<%= movie["Title"] %>
-	<a href="/movie/<%=movie["imdbID"]%>">Find out more about <%=movie["imdbID"]%></a>
-	</div>
+  <div>
+  <%= movie["Title"] %>
+  <a href="/movie/<%=movie["imdbID"]%>">Find out more about <%=movie["imdbID"]%></a>
+  </div>
 <% end %>
